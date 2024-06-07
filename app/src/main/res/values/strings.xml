@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LOGIN_APP_COM</string>
+    <string name="login_txt1">Usuario</string>
+    <string name="hint_txt1">JhonDoe</string>
+    <string name="login_lbl2">Contraseña</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_singup">Register</string>
+    <string name="lbl_actregister_username">Usuario</string>
+    <string name="lbl_actregister_password">Contraseña</string>
+    <string name="lbl_actregister_gender">Genero</string>
+    <string name="lbl_actregister_female">Femenino</string>
+    <string name="lbl_actregister_male">Masculino</string>
+    <string name="lbl_actregister_register">Registrar</string>
+    <string name="lbl_actregister_goback">Volver</string>
+</resources>
