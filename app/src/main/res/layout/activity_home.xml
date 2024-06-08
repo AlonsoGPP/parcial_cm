@@ -7,4 +7,87 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
+    <TextView
+        android:id="@+id/lbl_home_hello"
+        android:layout_width="231dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="361dp"
+        android:layout_height="365dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="3"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_home_hello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="34dp">
+
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button13"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button21"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button22"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button23"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button31"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button32"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+
+        <Button
+            android:id="@+id/button33"
+            style="@style/TicTacToeButton"
+            android:onClick="onGridButtonClick" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:onClick="resetGame"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

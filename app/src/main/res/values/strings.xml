@@ -12,4 +12,8 @@
     <string name="lbl_actregister_male">Masculino</string>
     <string name="lbl_actregister_register">Registrar</string>
     <string name="lbl_actregister_goback">Volver</string>
+    <string name="msg_not_valid_user">Usuario no valido</string>
+    <string name="msg_not_valid_password">Contraseña no valida</string>
+    <string name="msg_not_valid_login">Datos de sesion no validos</string>
+    <string name="msg_home_hello">Hola</string>
 </resources>
