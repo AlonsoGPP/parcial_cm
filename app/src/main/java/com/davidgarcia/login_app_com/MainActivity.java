@@ -49,11 +49,7 @@ public class MainActivity extends AppCompatActivity {
             Usuario.usuarios.add(user);
         }
     }
-   // @Override
-   // protected  void onResume(){
-    //    super.onResume();
 
-   // }
     private void initComponents(){
         btn_register=findViewById(R.id.btn_register);
         btn_login = findViewById(R.id.btn_login);

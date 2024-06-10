@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class Home extends AppCompatActivity {
     TextView helloText;
     String username;
-    private boolean player1Turn = true;
+
     private Button[][] buttons = new Button[3][3];
     private Game game;
     @Override
@@ -35,7 +35,6 @@ public class Home extends AppCompatActivity {
         helloUser( this.username);
 
         game = new Game();
-        GridLayout gridLayout = findViewById(R.id.gridLayout);
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -68,11 +67,11 @@ public class Home extends AppCompatActivity {
             button.setText(game.isPlayer1Turn() ? "O" : "X");
             if (game.isGameFinished()) {
                 if (game.isBoardFull()) {
-                    showToast("Draw!");
+                    showToast(getString(R.string.msg_draw));
                 } else {
-                    showToast(game.isPlayer1Turn() ? "Player 2 (O) wins!" : "Player 1 (X) wins!");
+                    showToast(game.isPlayer1Turn() ? getString(R.string.msg_winnerO) : getString(R.string.msg_winnerX));
                 }
-                //disableButtons();
+                disableButtons();
             }
         }
     }

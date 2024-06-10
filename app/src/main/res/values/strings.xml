@@ -16,4 +16,7 @@
     <string name="msg_not_valid_password">Contraseña no valida</string>
     <string name="msg_not_valid_login">Datos de sesion no validos</string>
     <string name="msg_home_hello">Hola</string>
+    <string name="msg_winnerX">Gana X!</string>
+    <string name="msg_winnerO">Gana O!</string>
+    <string name="msg_draw">Empate!</string>
 </resources>
