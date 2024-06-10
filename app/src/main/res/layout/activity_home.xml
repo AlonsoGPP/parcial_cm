@@ -27,56 +27,108 @@
         android:columnCount="3"
         android:padding="16dp"
         android:rowCount="3"
+        android:background="@drawable/border"
         app:layout_constraintTop_toBottomOf="@+id/lbl_home_hello"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteX="34dp">
 
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
 
         <Button
             android:id="@+id/button11"
+            android:layout_gravity="center"
             style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:onClick="onGridButtonClick"
 
+            />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button12"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
+        </FrameLayout>
 
-        <Button
-            android:id="@+id/button13"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
-
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
+            <Button
+                android:id="@+id/button13"
+                style="@style/TicTacToeButton"
+                android:onClick="onGridButtonClick" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button21"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
-
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button22"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
-
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button23"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
-
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout7"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button31"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
-
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout8"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button32"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
-
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/frameLayout9"
+            android:background="@drawable/button_border"
+            android:padding="5dp"
+            >
         <Button
             android:id="@+id/button33"
             style="@style/TicTacToeButton"
             android:onClick="onGridButtonClick" />
+        </FrameLayout>
     </GridLayout>
 
     <Button
@@ -90,4 +142,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
