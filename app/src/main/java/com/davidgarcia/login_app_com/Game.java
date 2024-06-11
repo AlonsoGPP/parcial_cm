@@ -1,14 +1,25 @@
 package com.davidgarcia.login_app_com;
 
+import java.util.Arrays;
+
 public class Game {
     private String[][] board;
     private boolean player1Turn;
     private boolean gameFinished;
+   // private int cPlays;
+    private int cPlays;
+    private int[][] lastPlaysPosX;
+    private int[][] lastPlaysPosO;
+    private int[] lastButtonO;
 
     public Game() {
         board = new String[3][3];
+       lastPlaysPosX=new int[2][6];
+        lastPlaysPosO=new int[2][6];
+        cPlays=0;
         player1Turn = true;
         gameFinished = false;
+
         resetBoard();
     }
 
@@ -24,7 +35,9 @@ public class Game {
         return board[row][col];
     }
 
-    public boolean makeMove(int row, int col) {
+    public int[] makeMove(int row, int col) {
+        int lastRow=-1;
+        int lastCol=-1;
         if (board[row][col].equals("") && !gameFinished) {
             board[row][col] = player1Turn ? "X" : "O";
             if (checkForWin()) {
@@ -32,11 +45,50 @@ public class Game {
             } else if (isBoardFull()) {
                 gameFinished = true;
             }
-                player1Turn = !player1Turn;
 
-            return true;
+            if(cPlays<=2){
+            if(player1Turn){
+
+                    lastPlaysPosX[0][cPlays]=row;
+                    lastPlaysPosX[1][cPlays]=col;
+
+
+            }else{
+
+                    lastPlaysPosO[0][cPlays]=row;
+                    lastPlaysPosO[1][cPlays]=col;
+
+            }
+                cPlays++;
+            }else{
+                if(cPlays>=6) {
+                    if (player1Turn) {
+                        lastRow = lastPlaysPosX[0][0];
+                        lastCol = lastPlaysPosX[1][0];
+                        board[lastRow][lastCol] = "";
+                        lastPlaysPosX[0] = Arrays.copyOfRange(lastPlaysPosX[0], 1, lastPlaysPosX[0].length);
+                        lastPlaysPosX[1] = Arrays.copyOfRange(lastPlaysPosX[1], 1, lastPlaysPosX[1].length);
+                        lastPlaysPosX[0][lastPlaysPosX[0].length - 1] = row;
+                        lastPlaysPosX[1][lastPlaysPosX[1].length - 1] = col;
+
+                    } else {
+                        lastRow = lastPlaysPosO[0][0];
+                        lastCol = lastPlaysPosO[1][0];
+                        board[lastRow][lastCol] = "";
+                        lastPlaysPosO[0] = Arrays.copyOfRange(lastPlaysPosO[0], 1, lastPlaysPosO[0].length);
+                        lastPlaysPosO[1] = Arrays.copyOfRange(lastPlaysPosO[1], 1, lastPlaysPosO[1].length);
+                        lastPlaysPosO[0][lastPlaysPosO[0].length - 1] = row;
+                        lastPlaysPosO[1][lastPlaysPosO[1].length - 1] = col;
+
+                    }
+                }
+            }
+            player1Turn=!player1Turn;
+
+
+
         }
-        return false;
+        return new int[]{lastRow, lastCol};
     }
 
     public void resetBoard() {

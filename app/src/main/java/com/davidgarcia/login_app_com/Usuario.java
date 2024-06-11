@@ -11,6 +11,7 @@ public class Usuario {
     public Usuario(String username, String password) {
         Username = username;
         Password = password;
+
     }
 
     public Usuario() {

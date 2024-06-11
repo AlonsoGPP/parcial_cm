@@ -63,7 +63,11 @@ public class Home extends AppCompatActivity {
         int row = Character.getNumericValue(buttonID.charAt(buttonID.length() - 2)) - 1;
         int col = Character.getNumericValue(buttonID.charAt(buttonID.length() - 1)) - 1;
 
-        if (game.makeMove(row, col)) {
+        int lastPlays[] = game.makeMove(row, col);
+        if(lastPlays[0]!=-1){
+
+            buttons[lastPlays[0]][lastPlays[1]].setText("");
+        }
             button.setText(game.isPlayer1Turn() ? "O" : "X");
             if (game.isGameFinished()) {
                 if (game.isBoardFull()) {
@@ -73,7 +77,7 @@ public class Home extends AppCompatActivity {
                 }
                 disableButtons();
             }
-        }
+
     }
 
     private void disableButtons() {
@@ -96,5 +100,15 @@ public class Home extends AppCompatActivity {
                 buttons[i][j].setEnabled(true);
             }
         }
+    }
+    public void goToLogin(View view){
+        Intent login = new Intent(this, MainActivity.class);
+
+        startActivity(login);
+
+
+
+
+        finish();
     }
 }

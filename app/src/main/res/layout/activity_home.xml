@@ -36,98 +36,97 @@
         <FrameLayout
             android:id="@+id/frameLayout1"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_gravity="center"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick"
-
-            />
+            <Button
+                android:id="@+id/button11"
+                style="@style/TicTacToeButton"
+                android:layout_gravity="center"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/frameLayout2"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button12"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button12"
+                style="@style/TicTacToeButton"
+                android:onClick="onGridButtonClick"
+                android:backgroundTint="#000000"
+                />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/frameLayout3"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
             <Button
                 android:id="@+id/button13"
                 style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
                 android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout4"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button21"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button21"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout5"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button22"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button22"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout6"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button23"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button23"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout7"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button31"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button31"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout8"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button32"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button32"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
         <FrameLayout
             android:id="@+id/frameLayout9"
             android:background="@drawable/button_border"
-            android:padding="5dp"
-            >
-        <Button
-            android:id="@+id/button33"
-            style="@style/TicTacToeButton"
-            android:onClick="onGridButtonClick" />
+            android:padding="5dp">
+            <Button
+                android:id="@+id/button33"
+                style="@style/TicTacToeButton"
+                android:backgroundTint="#000000"
+                android:onClick="onGridButtonClick" />
         </FrameLayout>
     </GridLayout>
 
@@ -138,9 +137,19 @@
         android:layout_below="@id/gridLayout"
         android:layout_centerHorizontal="true"
         android:onClick="resetGame"
-        android:text="Reset"
+        android:text="@string/btn_reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/bt_volver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_volver"
+        android:onClick="goToLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

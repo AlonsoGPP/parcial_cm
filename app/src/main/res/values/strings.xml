@@ -13,10 +13,20 @@
     <string name="lbl_actregister_register">Registrar</string>
     <string name="lbl_actregister_goback">Volver</string>
     <string name="msg_not_valid_user">Usuario no valido</string>
+    <string name="msg_not_valid_user_lenght">Usuario no valido: max 10 letras</string>
     <string name="msg_not_valid_password">Contraseña no valida</string>
     <string name="msg_not_valid_login">Datos de sesion no validos</string>
     <string name="msg_home_hello">Hola</string>
     <string name="msg_winnerX">Gana X!</string>
     <string name="msg_winnerO">Gana O!</string>
     <string name="msg_draw">Empate!</string>
+    <string name="img_description">App Icon</string>
+    <string name="lbl_color">Color favorito</string>
+    <string name="btn_volver">Volver</string>
+    <string name="btn_reset">Reset</string>
+    <string name="lbl_animal_fav">animal favorito</string>
+    <string name="hint_password">*********</string>
+    <string name="chk_blue">Azul</string>
+    <string name="chk_red">Rojo</string>
+
 </resources>
